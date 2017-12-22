@@ -170,6 +170,7 @@ export class ServiceSingletonProvider {
     alert.present();
   }
 
+  
   //SuperAdmin methods
   postSuperAdminSave(myKeyVals){
     var u=this.BASE_URL+"superadmin"+"/"+"save";
@@ -261,4 +262,72 @@ export class ServiceSingletonProvider {
     console.log(u);
     return this.getData(u);
   }
+
+  //Get all equipments of one Industry
+  getIndustryAllEquip(ID){
+    var u=this.BASE_URL+"equip_master"+"/"+"getAllEquip"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+//Post eqipment of one industry
+  postIndustryOneEquip(myKeyVals){
+    var u=this.BASE_URL+"equip_master"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u, myKeyVals);
+  }
+
+  //get All Material of One Industry
+  getIndustryAllMaterial(ID){
+    var u=this.BASE_URL+"material"+"/"+"getAll"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+  //Post one material of one Industry
+  postIndustryOneMaterial(myKeyVals){
+    var u=this.BASE_URL+"material"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u, myKeyVals);
+  }
+  //get All StageEquipment Info of one company
+  getIndustryAllSatgeEquip(ID){
+    var u=this.BASE_URL+"stageEquipment"+"/"+"getAll"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+  //post one StageEquipment Info of one company
+  postIndustryOneStageEquip(myKeyVals){
+    var u=this.BASE_URL+"stageEquipment"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u, myKeyVals);
+  }
+  //get all Shift Info of one company
+  getIndustryAllShift(ID){
+    var u=this.BASE_URL+"shift"+"/"+"allshift"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+  //post one Shift info of one company
+  postIndustryOneShift(myKeyVals){
+    var u=this.BASE_URL+"shift"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u, myKeyVals);
+  }
+  //get all Lots Info of one company
+  getIndustryAllLots(ID){
+    var u=this.BASE_URL+"lot"+"/"+"getAll"+"/"+ID;
+    console.log(u);
+    return this.getData(u);
+  }
+  //post one lots info of one company
+  postIndustryOneLots(myKeyVals){
+    var u=this.BASE_URL+"lot"+"/"+"save";
+    console.log(u);
+    console.log(myKeyVals);
+    return this.postData(u, myKeyVals);
+  }
+  
 }
