@@ -6,7 +6,7 @@ import {Events, AlertController, LoadingController,ToastController } from "ionic
 
 @Injectable()
 export class ServiceSingletonProvider {
-  public BASE_URL: string = "http://dii-api-lpu.herokuapp.com/app/route/";
+  public BASE_URL: string = "https://truenaturetechnologies.herokuapp.com/app/route/";
   public alert:any;
   public toast:any;
   public loading:any;
