@@ -21,12 +21,12 @@
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="resources/android/icon/tn-logo.png" />
-        <icon density="mdpi" src="resources/android/icon/tn-logo.png" />
-        <icon density="hdpi" src="resources/android/icon/tn-logo.png" />
-        <icon density="xhdpi" src="resources/android/icon/tn-logo.png" />
-        <icon density="xxhdpi" src="resources/android/icon/tn-logo.png" />
-        <icon density="xxxhdpi" src="resources/android/icon/tn-logo.png" />
+        <icon density="ldpi" src="resources/android/icon/icon.jpg" />
+        <icon density="mdpi" src="resources/android/icon/icon.jpg" />
+        <icon density="hdpi" src="resources/android/icon/icon.jpg" />
+        <icon density="xhdpi" src="resources/android/icon/icon.jpg" />
+        <icon density="xxhdpi" src="resources/android/icon/icon.jpg" />
+        <icon density="xxxhdpi" src="resources/android/icon/icon.jpg" />
         <splash density="land-ldpi" src="resources/android/splash/splash.png" />
         <splash density="land-mdpi" src="resources/android/splash/splash.png" />
         <splash density="land-hdpi" src="resources/android/splash/splash.png" />
