@@ -7,8 +7,8 @@ import { DashboardPage } from '../pages/Dashboard/Dashboard';
 import { ServiceSingletonProvider } from '../providers/service-singleton/service-singleton';
 import { SignInPage } from '../pages/SignIn/SignIn';
 import { AdminProfilePage } from '../pages/AdminProfile/AdminProfile';
-import { IndustryInfoPage } from '../pages/industryInfo/industryInfo';
-import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser'
+//import { IndustryInfoPage } from '../pages/industryInfo/industryInfo';
+//import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser'
 
 @Component({
   selector:'app-container',
@@ -19,7 +19,6 @@ export class MyApp {
 
   public pages: Array<{title: string,component: any,index:number}>;
   rootPage:any;
-  private router=[];
   
   constructor(platform: Platform,
               statusBar: StatusBar, 
