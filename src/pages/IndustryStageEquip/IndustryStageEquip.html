@@ -18,7 +18,15 @@
         <ion-fab top right edge>
             <button ion-fab mini tappable (click)="addInduStageEquip()"><ion-icon name="add"></ion-icon></button>
         </ion-fab>
-        <ion-card>
-            
+        <ion-card *ngFor="let list of StageEquipmentData">
+            <ion-item>
+                <ion-icon ion-avatar item-start name="ios-cog"></ion-icon>
+                <h2>{{list.stage_name}}</h2>
+                <p>{{list.description}}</p>
+                <hr>
+                <label>{{list.material_master_id}}</label>
+                <br>
+                <label>{{list.equipment_master_id}}</label>
+            </ion-item>
         </ion-card>
     </ion-content>
