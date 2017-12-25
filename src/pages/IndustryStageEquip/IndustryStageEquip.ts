@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,NavParams } from 'ionic-angular';
 import { ServiceSingletonProvider } from '../../providers/service-singleton/service-singleton';
+import { AddIndustryStageEquipPage } from '../AddIndustryStageEquip/AddIndustryStageEquip';
 @Component({
   selector: 'page-IndustryStageEquip',
   templateUrl: 'IndustryStageEquip.html'
@@ -25,7 +26,7 @@ export class IndustryStageEquipPage {
   }
 
   addInduStageEquip(){
-
+    this.navCtrl.push(AddIndustryStageEquipPage,{'IndustryId':this.IndustryID});
   }
 
   doRefresh(refresher) {

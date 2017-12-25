@@ -31,6 +31,7 @@ import { AddIndustryUserTypePage } from '../pages/AddIndustryUserType/AddIndustr
 import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser';
 import { AddIndustryEquipmentPage } from '../pages/AddIndustryEquipment/AddIndustryEquipment';
 import { AddIndustryMaterialPage } from '../pages/AddIndustryMaterial/AddIndustryMaterial';
+import { AddIndustryStageEquipPage } from '../pages/AddIndustryStageEquip/AddIndustryStageEquip';
 @NgModule({
   declarations: [
     MyApp,
@@ -56,7 +57,8 @@ import { AddIndustryMaterialPage } from '../pages/AddIndustryMaterial/AddIndustr
     AddIndustryUserTypePage,
     AddIndustryUserPage,
     AddIndustryEquipmentPage,
-    AddIndustryMaterialPage
+    AddIndustryMaterialPage,
+    AddIndustryStageEquipPage
   ],
   imports: [
     BrowserModule,
@@ -89,7 +91,8 @@ import { AddIndustryMaterialPage } from '../pages/AddIndustryMaterial/AddIndustr
     AddIndustryUserTypePage,
     AddIndustryUserPage,
     AddIndustryEquipmentPage,
-    AddIndustryMaterialPage
+    AddIndustryMaterialPage,
+    AddIndustryStageEquipPage
   ],
   providers: [
     StatusBar,
