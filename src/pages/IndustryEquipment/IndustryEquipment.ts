@@ -12,6 +12,7 @@ export class IndustryEquipmentPage {
   public industyDeatils:any='Industry Equipments';
   public IndustryID:any;
   public Status:boolean=false;
+  public EquipmentData:any;
   constructor(public navCtrl: NavController,
               public navParms: NavParams,
               public webService: ServiceSingletonProvider) {
@@ -50,6 +51,9 @@ export class IndustryEquipmentPage {
     this.webService.getIndustryAllEquip(this.IndustryID).then(data=>{
       this.webService.stopLoading();
       console.log(data);
+      if(data['data']){
+        this.EquipmentData=data['data'];
+      }
     })
   }
 }

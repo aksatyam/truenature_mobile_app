@@ -19,4 +19,12 @@
         <ion-fab top right edge>
             <button ion-fab mini tappable (click)="addInduEquipment()"><ion-icon name="add"></ion-icon></button>
         </ion-fab>
+        <ion-card *ngFor="let data of EquipmentData">
+                <ion-card-header>
+                    {{data.equip_name}} 
+                </ion-card-header>
+                <ion-card-content>
+                    {{data.equip_desc}}
+                </ion-card-content>
+        </ion-card>
     </ion-content>
