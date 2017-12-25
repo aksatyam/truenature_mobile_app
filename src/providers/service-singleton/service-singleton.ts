@@ -84,7 +84,6 @@ export class ServiceSingletonProvider {
       this.storage.set('DEVICE_ID','');
       resolve(true);
     });
-
   }
   
   //GET-POST Method Call Functions 
