@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,NavParams } from 'ionic-angular';
 import { ServiceSingletonProvider } from '../../providers/service-singleton/service-singleton';
-
+import { AddIndustryEquipmentPage } from '../AddIndustryEquipment/AddIndustryEquipment';
 @Component({
   selector: 'page-IndustryEquipment',
   templateUrl: 'IndustryEquipment.html'
@@ -11,6 +11,7 @@ export class IndustryEquipmentPage {
   public IndustryInfo:any;
   public industyDeatils:any='Industry Equipments';
   public IndustryID:any;
+  public Status:boolean=false;
   constructor(public navCtrl: NavController,
               public navParms: NavParams,
               public webService: ServiceSingletonProvider) {
@@ -24,7 +25,7 @@ export class IndustryEquipmentPage {
   }
 
   addInduEquipment(){
-
+    this.navCtrl.push(AddIndustryEquipmentPage,{'IndustryId':this.IndustryID});
   }
 
   doRefresh(refresher) {
@@ -37,6 +38,13 @@ export class IndustryEquipmentPage {
     }, 2000);
   }
 
+  ionViewDidEnter(){
+    if(this.Status){
+      this.CallWebServices();
+    }
+    this.Status=true;
+  }
+  
   CallWebServices(){
     this.webService.presentLoading();
     this.webService.getIndustryAllEquip(this.IndustryID).then(data=>{

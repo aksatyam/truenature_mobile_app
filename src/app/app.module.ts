@@ -29,6 +29,7 @@ import { IndustryShiftPage } from '../pages/IndustryShift/IndustryShift';
 import { IndustryLotsPage } from '../pages/IndustryLots/IndustryLots'; 
 import { AddIndustryUserTypePage } from '../pages/AddIndustryUserType/AddIndustryUserType';
 import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser';
+import { AddIndustryEquipmentPage } from '../pages/AddIndustryEquipment/AddIndustryEquipment';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser';
     IndustryShiftPage,
     IndustryLotsPage,
     AddIndustryUserTypePage,
-    AddIndustryUserPage
+    AddIndustryUserPage,
+    AddIndustryEquipmentPage
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,8 @@ import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser';
     IndustryShiftPage,
     IndustryLotsPage,
     AddIndustryUserTypePage,
-    AddIndustryUserPage
+    AddIndustryUserPage,
+    AddIndustryEquipmentPage
   ],
   providers: [
     StatusBar,

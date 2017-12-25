@@ -7,7 +7,7 @@ import { ServiceSingletonProvider } from '../../providers/service-singleton/serv
 })
 export class AddIndustryUserPage {
     public title="Add User";
-    public IndustryId:any="5a3aa89c8357b30021eed607";
+    public IndustryId:any;
     public Username:any='';
     public UserType:any;
     public Contact:any='';
