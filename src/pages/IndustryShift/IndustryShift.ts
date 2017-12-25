@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,NavParams } from 'ionic-angular';
 import { ServiceSingletonProvider } from '../../providers/service-singleton/service-singleton';
-
+import { AddIndustryShiftPage } from '../AddIndustryShift/AddIndustryShift';
 @Component({
   selector: 'page-IndustryShift',
   templateUrl: 'IndustryShift.html'
@@ -44,7 +44,7 @@ export class IndustryShiftPage {
   }
   
   addInduShift(){
-
+    this.navCtrl.push(AddIndustryShiftPage,{'IndustryId':this.IndustryID})
   }
 
   CallWebServices(){
