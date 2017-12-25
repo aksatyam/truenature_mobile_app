@@ -11,4 +11,10 @@ page-AddIndustryShift{
     .btnClear{
         background-color:color($colors, bluegreen);
     }
+    .item-md [item-start], .item-ios [item-start]{
+        margin: 0px!important;
+    }
+    .datetime-md, .datetime-ios{
+        padding:0px;
+    }
 }
