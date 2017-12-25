@@ -30,7 +30,7 @@ import { IndustryLotsPage } from '../pages/IndustryLots/IndustryLots';
 import { AddIndustryUserTypePage } from '../pages/AddIndustryUserType/AddIndustryUserType';
 import { AddIndustryUserPage } from '../pages/AddIndustryUser/AddIndustryUser';
 import { AddIndustryEquipmentPage } from '../pages/AddIndustryEquipment/AddIndustryEquipment';
-
+import { AddIndustryMaterialPage } from '../pages/AddIndustryMaterial/AddIndustryMaterial';
 @NgModule({
   declarations: [
     MyApp,
@@ -55,7 +55,8 @@ import { AddIndustryEquipmentPage } from '../pages/AddIndustryEquipment/AddIndus
     IndustryLotsPage,
     AddIndustryUserTypePage,
     AddIndustryUserPage,
-    AddIndustryEquipmentPage
+    AddIndustryEquipmentPage,
+    AddIndustryMaterialPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +88,8 @@ import { AddIndustryEquipmentPage } from '../pages/AddIndustryEquipment/AddIndus
     IndustryLotsPage,
     AddIndustryUserTypePage,
     AddIndustryUserPage,
-    AddIndustryEquipmentPage
+    AddIndustryEquipmentPage,
+    AddIndustryMaterialPage
   ],
   providers: [
     StatusBar,
