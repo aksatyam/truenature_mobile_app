@@ -78,8 +78,9 @@ page-SignIn{
     position: relative;
     border-radius: 50%;
     border: 1px solid color($colors,bluegreen);
-    max-height:30vw;
-    margin-top: -15vw;
+    max-height:20vw;
+    max-width: 30vw;
+    margin-top: -10vw;
     z-index: 9999;
   }
   .main-container{
