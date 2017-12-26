@@ -17,11 +17,28 @@ import { IndustryLotsPage } from '../IndustryLots/IndustryLots';
 export class IndustryInfoPage {
   public title="Industry Information";
   public IndustryInfo:any;
+  public UserTypeCount:any;
+  public UserCount:any;
+  public EquipCount:any;
+  public MaterialCount:any;
+  public StageEquipCount:any;
+  public ShiftCount:any;
+  public LotsCount:any;  
+  public Status:boolean=false;
+
   constructor(public navCtrl: NavController, public webService:ServiceSingletonProvider, public navParms:NavParams) {
     if(this.navParms.get('IndustryInfo')){
         this.IndustryInfo=this.navParms.get('IndustryInfo');
         this.title=this.IndustryInfo.indu_name+" Info";
     }
+    this.getCount();
+  }
+
+  ionViewDidEnter(){
+    if(this.Status){
+      this.getCount();
+    }
+    this.Status=true;
   }
 
   IndustryProfile(){
@@ -62,5 +79,44 @@ export class IndustryInfoPage {
   IndustryLotsInfo(){
     //this.webService.presentAlert('Warning!','this card show about industry Lots Info');
     this.navCtrl.push(IndustryLotsPage,{'IndustryInfo':this.IndustryInfo});
+  }
+
+  getCount(){
+    this.webService.presentLoading();
+    this.webService.getAllIndutsryType(this.IndustryInfo._id).then(data=>{
+      this.UserTypeCount=data['data'].length;
+      console.log(this.UserTypeCount);
+    });
+
+    this.webService.getAllIndustryUser(this.IndustryInfo._id).then(data=>{
+      this.UserCount=data['data'].length;
+      console.log(this.UserCount);
+    });
+
+    this.webService.getIndustryAllEquip(this.IndustryInfo._id).then(data=>{
+      this.EquipCount=data['data'].length;
+      console.log(this.EquipCount);
+    });
+
+    this.webService.getIndustryAllMaterial(this.IndustryInfo._id).then(data=>{
+      this.MaterialCount=data['data'].length;
+      console.log(this.MaterialCount);
+    });
+
+    this.webService.getIndustryAllSatgeEquip(this.IndustryInfo._id).then(data=>{
+      this.StageEquipCount=data['data'].length;
+      console.log(this.StageEquipCount);
+    });
+
+    this.webService.getIndustryAllShift(this.IndustryInfo._id).then(data=>{
+      this.ShiftCount=data['data'].length;
+      console.log(this.ShiftCount);
+    });
+
+    this.webService.getIndustryAllLots(this.IndustryInfo._id).then(data=>{
+      this.LotsCount=data['data'].length;
+      console.log(this.LotsCount);
+      this.webService.stopLoading();
+    });
   }
 }
