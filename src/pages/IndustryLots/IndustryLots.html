@@ -19,5 +19,15 @@
         <ion-fab top right edge>
             <button ion-fab mini tappable (click)="addInduLot()"><ion-icon name="add"></ion-icon></button>
         </ion-fab>
-
+        <ion-card *ngFor="let list of LotsData">
+            <ion-item>
+                <ion-icon item-start name="logo-buffer"></ion-icon>
+                <h2>Name : {{list.lot_name}}</h2>
+                <p>Quantity : {{list.lot_qty}}</p>
+            </ion-item>
+            <hr>
+            <ion-item>
+                <ion-icon item-end name="ios-create-outline"></ion-icon>
+            </ion-item>
+        </ion-card>
     </ion-content>
