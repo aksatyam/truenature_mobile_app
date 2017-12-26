@@ -321,6 +321,7 @@ export class ServiceSingletonProvider {
     console.log(u);
     return this.getData(u);
   }
+  
   //post one lots info of one company
   postIndustryOneLots(myKeyVals){
     var u=this.BASE_URL+"lot"+"/"+"save";
