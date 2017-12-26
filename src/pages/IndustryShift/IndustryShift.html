@@ -31,13 +31,13 @@
                             <ion-icon name="ios-time-outline"></ion-icon>
                     </ion-col>
                     <ion-col col-5>
-                        <ion-datetime displayFormat="hh:mm A" [(ngModel)]="shift.shift_start"></ion-datetime>
+                        <ion-datetime disabled displayFormat="hh:mm A" [(ngModel)]="shift.shift_start"></ion-datetime>
                     </ion-col>
                     <ion-col col-1>
                         <ion-icon name="ios-time-outline"></ion-icon>
                     </ion-col>
                     <ion-col col-5>
-                        <ion-datetime displayFormat="hh:mm A" [(ngModel)]="shift.shift_end"></ion-datetime>
+                        <ion-datetime disabled displayFormat="hh:mm A" [(ngModel)]="shift.shift_end"></ion-datetime>
                     </ion-col>
             </ion-row>
             <ion-label class="datetimeclass">Entry Date : {{shift.createdAt | date:'mediumDate'}}</ion-label>

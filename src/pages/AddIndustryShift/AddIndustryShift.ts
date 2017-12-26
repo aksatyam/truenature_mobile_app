@@ -13,8 +13,8 @@ export class AddIndustryShiftPage {
   public ShiftName:any='';
   public Description:any='';
   public ShiftTime:any='';
-  public timeStarts:any=new Date().toISOString();
-  public timeEnds:any=new Date().toISOString();
+  public timeStarts:any;
+  public timeEnds:any;
   constructor(public navCtrl: NavController,
         public navParms: NavParams,
         public webService: ServiceSingletonProvider) {
